@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> SQL Notes</title>
+    </head>
+    <body>
+        <a href="CNotes.html">CNotes</a>
+        <a href="Networking.html">Networking</a>
+        <a href="DataStructure.html">DataStructure</a>
+        <h1> <b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color:blue;font-size: 50px;"><u><i>SQL NOTES</i></u></span></b></h1>
+        <hr/>
+        <p>
+            <b><span style="color:yellowgreen;font-size: 50px;"><u><i>SQL</i></u></span> <br>
+                 structured query language
+                 It is not a <b><i><u>Programming Language</u></i></b><br/><i> It is The Language</i> Of <b>Oracal</b> to Communicate with oracal <b>Engine</b>.
+                 </br><b><i><u> SQL</u></i></b> is case insensitive</br>
+                 <i><u> NOTE</u></i> Statement used in [] Syntax are Optional.
+                 in SQL Everything is done with the help of Command.
+                 In SQL Every Commond Should be Terminated by semi colon(;)
+                <hr/>
+                <ol>
+                   <span style="color:red;font-size: 25px;"><li><b>CREATING TABLE</b></li></span></li>
+                    <hr>
+                     <b>CREATE TABLE</b> tableName(FieldName type [(SIZE)][,FieldName type[(SIZE)],......]); 
+                    <p> 
+                        <ul>
+                        <li>Table Name - Any valid Identifier</li>
+                        <li>Field Name - Any Valid Identifier</li>
+                        <li>Size - Number </li>
+                        <li>Type - Any Valid Oracal Data Type</li></ul>
+                    </p>
+                    <hr>
+                    <p> ORACALE COMMON DATA TYPE</p>
+                    <P> 
+                        <ul>
+                            <li> For Numeric Value - Number</li>
+                            <li> For String Value - Char , Varchar2 , nchar , nvarchar2</li>
+                        </ul>
+                    </P>
+                    <p> EX:</p>
+                    <p> Creating a Table In Which we can store the Name , Gender , Address , MobileNo of our Friends.</p>
+                    <p><b><u> TABLE NAME - </u> FRIEND</b></p>
+                    <p> <b> field/columns:</b></p><hr>
+                    <p> <b> FieldName &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Size </b>  
+                    <ul>
+                    <li> Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;varchar2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;40</li>
+                    <li> Gender &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cahr &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1</li>
+                    <li> Address &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;varchar2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;50</li>
+                    <li> MobNo &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;char &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10</li>
+                   </ul>
+                   <p><b><i> CREATE TABLE</i></b> friends (name varchar2(40) , gender char , address varhar2(50) , mobno char(10);</p>
+                   <hr/>
+                   <p><b> CREATE A TABLE FOR STORING STUDENTS RECORDS AS : NAME , CLASS , ROLL , HINDI , ENGLISH , MATH , SCIENCE.</b> </p>
+                   <p> CREATE TABLE students(name varchar2(40) , class number(2) , rollNumber(2) , Hindi number(3) , English number(3) , Math number(3) , science number(3));</p>
+                   <hr/>   
+
+                   <span style="color:red;font-size: 25px;"><li><b>VIEW STRUCTURE OF TABLE</b></li></span>
+                    <P> <b><i> DESCRIBE -> </i>This Commond is used to view the structure of pre created table.</b></P>
+               <p><b><i><U>SYNTAX.</U></i></b></p>
+               <p><i>DESC[RIBE]</i> tableName;</p>
+               <p>EX:</p>
+               <p><i>DESCRIBE students;</i></p>
+               <p><b> or</b></p>
+              
+               <p><i>DESC</i> students;</p>
+               <hr/>
+
+               <span style="color:red;font-size: 25px;"><li><b>INSERTING DATA IN TABLE</b></li></span>
+               <b><i>INSERT</i></b> -> This commond is used to insert data in pre created table.
+               <p><b><u><i>SYNTAX</i></u></b></p>     
+               INSERT INTO tableName values(field1value,field2value,field3value,.......);
+               <p><b>NOTE:- </b> String Value must be enclosed within single quotes(' ')</p>
+               <p><b> EX:</b></p>
+               <p>INSERT INTO students values('Piyush Kumar','m','6205059314');</p>
+               <p> INSERT INTO students values('Amit Kumar','706131558');</p>
+               <p><b>OUTPUT:-</b> 1 Row Created</p>
+               <hr/>
+               <span style="color:red;font-size: 25px;"><li><b>VIEW RECORDS OF TABLE</b></li></span>
+               <p><i> SELECT</i> -> This commond is used to View the records of table.</p>
+               <p><b><u><i> SYNTAX</i></u></b></p>
+               <p> SELECT * FROM tableName;</p>
+               <p><b>EX:</b></p>
+               <p> SELECT * FROM students;</p>
+               <p> SELECT * FROM friends;</p>
+               <hr/>
+               <span style="color:red;font-size: 25px;"><li><b>INSERTING SPECIFIC FIELDS VALUE IN TABLE</b></li></span>
+               <p><b><u><i>SYNTAX</i></u></b></p>
+               <p>INSERT INTO tableName[(fieldName[,fieldName[,fieldName,.....]])] Values (fieldvaluesSeperated By Comma);</p>
+               <hr/>
+               <span style="color:red;font-size: 25px;"><li><b>CREATING NEW USER IN ORACAL</b></li></span>
+               <p><u><b><i>SYNTAX</i></b></u></p>
+               <p>CREATE USER user Name<b>IDENTIFIED BY</b> Password;</p>
+               EX.
+               <p>CREATE USER piyush Identified by piyush123;</p>
+               <p><b>MASSAGE:-</b> New user created </p>
+               after creating user grant access to that use as:
+               <hr/>
+               <span style="color:red;font-size: 25px;"><li><b>CHANGE PASSWORD OF USER</b></li></span>
+               <p><b>ALTER USER</b> userName <b>IDENTIFIED BY</b> newPassword;</p>
+               <hr/><span style="color:blue;font-size: 25px;">
+               <p>{ }---> Is not Part of syntax.</p>
+               <p>{ }---> Represents Mandatory Value.</p>
+               <p>|  ---> OR Value.</p>
+               <p>X|Y|Z --> Any one should be used.</p>
+               <p>Here * Represents all columns.</p></span>
+               <hr/>
+               <span style="color:red;font-size: 25px;"><li><b> DELETING TABLE</b></li></span>
+               <p><b>DROP TABLE-> </b> This commond is used to delete the pre created tables. It will delete table with its records.</p>
+               <p><i><u><b>SYNTAX</b></u></i></p>
+               <p> DROP TABLE tableName;</p>
+               <p>EX:</p>
+               <p>DROP TABLE student;</p>
+               <hr/>
+               <span style="color:red;font-size: 25px;"><li><b> DELETING USER (ONLY IN ORACAL)</b></li></span>
+               <p><b> DROP USER-></b> userName;-> It will delete The User.</p>
+               <hr/>
+               <span style="color:red;font-size: 25px;"><li><b>MODIFYING THE STRUCTURE OF TABLE</b></li></span>
+               <p><b>ALTER TABLE -></b> This commond is Used to MODIFY the structure of table</p>
+
+
+               <ol>
+                   <hr/>
+                   <span style="color:greenyellow;font-size: 25px;"><li> ADD NEW COLUMN TO TABLE</li></span>
+                   <p><b>ALTER TABLE</b> tablename <b>ADD</b> columnName type[(SIZE)];</p> 
+                   <p>OR</p>
+                   <p><b>ALTER TABLE</b> tableName<b>ADD</b>(columnName type[(SIZE)][,columnName type[(SIZE)];</p>
+                   <hr/>
+                   <span style="color:greenyellow;font-size: 25px;"><li><b> MODIFYING TYPE OR SIZE OF COLUMNS.</b></li></span>
+                   <p><b>ALTER TABLE</b> tableName <b>MODIFY</b> pre created columnName type(SIZE);</p>
+                   <hr/>
+                   <span style="color:greenyellow;font-size: 25px;"><li><b>DELETING COLUMN OF TABLE</b></li></span>
+                   <p><b>ALTER TABLE</b> tableName <b> DROPCOLUMN</b> columnName;</p>
+                   </ol>
+                   <hr/>
+                   <p><b><u>CONSTRAINT</u></b>:-> Set Of Rules.</p>
+                   <p>Used to maintain data integrity</p>
+                   <ol>
+                       <li><b>NOT NULL CONSTRAINT</b></li>
+                        <ul>
+                           <li><p>USE TO MAKE FIELD MENDATORY</p></li>
+                           
+                        </ul>
+                        <p><b>CREATING NOT NULL CONSTRAINT</b></p>
+                        <p><b><i><u>SYNTAX</u></i></b></p>
+                        <p><b>CREATE TABLE</b>tableName(fieldName type[(SIZE)]<b>[not null] , fieldName type[(SIZE)]);</b></p>
+                        <p><b>EX.</b></p>
+                        <p><b>CREATE TABLE</b> result (Srno number(3) not null , name varchar2(30) , ......;</p>
+
+
+
+                      
+                       <li><b> PRIMARY KEY CONSTRAINT</b></li>
+                       <ul>
+                       <li><p> <b> <i> PRIMARY KEY COLUMN CONTAINS UNIQUE VALUE. </i></b></p></li>
+                       <li><p><i><b>PRIMARY KEY COLUMN CAN'T CONTAIN <u>NULL</u> VALUE.</b></i></p></li>
+                       <p><u>ONE TABLE MAY HAVE ONLY ONE PRIMARY KEY</u></p>
+
+                       </ul>
+                       <ol> <li><b><i>CREATING PRIMARY KEY</i></b></li></ol>
+                       <p> 1. At The Time Of Table Creation.</p>
+                       <p><i><b><u>SYNTAX</u></b></i></p>
+                       <p><b>CREATING TABLE </b>tableName(fieldName type[(SIZE)][PRIMARY KEY],fieldName type[(SIZE)].....;</p>
+                       <p><b><u>COMMOND:-</u></b></p>
+                       <p><b>CREATE TABLE</b> result(Srno number(4) Primary Key , name varchar2(30) not null , marks number(3)); </p>
+                       <p><b><u>INSERT:-</u></b></p>
+                       <p><b>insert into result values(&Srno,'&name','&marks);
+                       <p><b><i>Enter value of Srno:-></i></b> 1</p>    
+                       <p><b><i>Enter value of Name:-></i></b> Piyush Kumar</p>
+                       <p><b><i>Enter value of Marks:-></i></b> 99</p>
+                       <p><u>OLD 1:</u> Insert into result values(&Srno,'&name','&marks);</p>
+                       <p><u>NEW 1:</u> Insert into result values(1 , Piyush kumar , 99;</p>
+                       <p><b>SQL>/</b></p>
+                       <p><b><i>Enter value of Srno:-></i></b> 2</p>    
+                       <p><b><i>Enter value of Name:-></i></b> Amit kumar</p>
+                       <p><b><i>Enter value of Marks:-></i></b> 99</p>
+                       </b></p>
+
+                       <li><b>UNIQUE KEY CONSTRAINT</b></li>
+                       <li><b>FOREIGN KEY CONSTRAINT</b></li>
+                       <li><b>CHECK CONSTRAINT</b></li>
+                       
+                   </ol>
+                   <hr/>
+                    <li><b><i>UPDATING RECORD(S) IN TABLE</i></b></li>
+                    <p><b><i>UPDATE -></i></b> This Commond is used to UPDATE records in table.</p>
+                    <p><b><i><u>SYNTAX</u></i></b></p>
+                    <p><b>UPDATE</b>tableName<b><i><u>SET</u></i></b> fieldName = <b>[WHERE CONDITION];</b></p>
+                    <p><b>EX.</b></p>
+                    <p><b>UPDATE</b> result set marks = 90 where roll = 10;</p>
+                    <hr/>
+                    <li><b><i>DELETING RECORD(S) FROM TABLE</i></b></li>
+                    <p><b>DELETE -></b> This Commond is used to delete record(s) from table.</p>
+                    <p><b><i><u>SYNTAX.</u></i></b></p>
+                    <p><b>DELETE FROM</b> tableName<b>[WHERE CONDITION];</b></p>
+                    <p><b>or</b></p>
+                    <p><b>DELETE FROM </b> result where roll 10 ;</p>
+                    <p><b>It will delete all record(s) having roll value 10 ;</b></p>
+                    <p><b>DELETE FROM</b> result ;</p>
+                    <p><b>I will delete all record(s) of Table.</b></p>
+                    <hr/>
+                    <li><b><i>DELETING ALL RECORD OF TABLE.</i></b></li>
+                    <p><b>TRUNCATE -></b> This commond is used to delete all record(s)of table. This commond <b>EMPTY </b>The table.</p>
+                    <p><b><u><i>SYNTAX.</i></u></b></p>
+                    <p><b>TRUNCATE </b> tableName;</p>
+                    <p> All records will be deleted table will be <b>EMPTY.</b></p>
+                    <hr/>
+                    <li><b>DELETE THE TABLE></b></li>
+                    <p><b>DROP TABLE -></b> This commond is used to delete the table.</p>
+                    <p><b><i><u>SYNTAX.</u></i></b></p>
+                    <p><b>DROP TABLE </b> tableName;</p>
+                    <p><b>DROP TABLE </b>result;</p>
+                    <hr/>
+                    <li><b>UPPER CASE.</b></li>
+                    <p><b><i><u>SYNTAX.</u></i></b></p>
+                    <p><b>Select fieldName , <b>UPPER</b> (fieldName) , fieldName From tableName ;</p>
+                    <p><b>EX.</b></p>
+                    <p><b>Select roll , UPPER (name) , math from Marks ;</b></p>
+                    <hr/>
+                    <li><b>LOWER CASE</b></li>
+                    <p><b><i><u>SYNTAX.</u></i></b></p>
+                    <p><b>Select fieldName <b>LOWER </b>( fieldName) , fieldName from tableName ;</p>
+                    <p><b>EX.</b></p>
+                    <p><b>Select roll , LOWER (name) , math from Marks ; </b></p>
+                    <hr/>
+                    
+                    
+                        <li><b>TOTAL</b></li>
+                        
+                        <p><b><i><u>SYNTAX.</u></i></b></p>
+                        <p><b>Select fieldName ,FieldName , fieldName + fieldName + fieldName + fieldName + fieldName from <b>TableName </b></p>
+                        <p><b>EX.</b></p>
+                        <p><b> Seect srno , class , rollno, hindi+ English +math +Science+ socalscience+ sanskrit from marks ;</b></p>
+                    <hr/>
+                    <li><b>SET ELAYAS.</b></li>    
+                    <p><b><i><u>SYNTAX.</u></i></b></p>
+                    <p><b>Select fieldName , fieldName , fieldName ,Hindi + English + Math + Science + SocalScience + Sanskrit <b><u>TOTAL </u></b> From marks ;</p>
+                    <p><b>EX.</b></p>
+                    <p><b> Select srno , name , class , Hindi + English + Math + Science + Sanskrit + SocalScience <b><u>[ seperated by space]</u></b> <b>TOTAL </b> From Marks.</p>
+                    <p><b><u>Elaysa name sname</u></b></p>
+                    <p><b>Select srno , name [seperated by space ] sname  , Class ..... From Marks ;</b></p>
+                    <hr/>
+                    <li><b>LIKE OPERATOR.</b></li>
+    
+                    <p><b>FIRST NAME 'A'</b></p>
+                    <p><b><u><i>SYNTAX.</i></u></b></p>
+                    <p><b>Select fieldName from tableName <b><u>WHERE NAME LIKE 'A%' ;</u></b></p>
+                    <p><b>EX.</b></p>
+                    <p>Select name from marks where name like 'A%' ;</p>
+                     <p><b>=> * KUMAR LETTER</b></p>
+                     <p><b>Select name from marks <u> where name like '%KUMAR%' ;</u></b></p>
+                     <p><b> => * THIRD LETTER M</b></p>
+                     <p><b>Select name from marks Where name like '__M%' ;</b></p>
+                     <p><b> => * FORTH LETTER U</b></p>
+                     <p><b>Select name from marks Where name like '___u%' ;</b></p>
+                     <hr/>
+                     <li><b>NULL VALUE STORE</b> </li>
+                     <p><b><i><u>SYNTAX.</u></i></b></p>
+                     <p><b>Select all column from table name <u>Where fieldName is null ;</u></b></p>
+                     <p><b> Select * from marks Where math is null</b></p>
+                     <hr/>
+                     <li><b>NOT NULL VALUE STORE.</b></li>
+                     <p><b><u><i>SYNTAX.</i></u></b></p>
+                     <p><b> Select name, math from marks where math is not null ;</b></p>
+                     <hr/>
+                     <li><b>MAX NUMBER</b></li>
+                     <p><b><i><u>SYNTAX.</u></i></b></p>
+                     <p><b>Select Max (fieldName) from table name ;</b></p>
+                     <p><b>EX.</b></p>
+                     <p><b>Select max (math) from marks ;</b></p>
+
+
+            
+                     
+
+
+                    
+
+                        
+
+                   
+
+                  
+
+               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </ol>
+    </body>
+</html>
