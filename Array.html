@@ -11,6 +11,7 @@
         <a href="String.html">String</a>
         <h1><u style="font-size: 50px;color:blue;"><b title="ARRAY">ARRAY</b></u></h1>
         <hr/>
+        <a target="_blank"href="     ">Array</a><br/>
         <p><b style="font-size: 50px;">A</b><b>n array is a <i><u>collection of variable</u> </i>of the<u> same type</u> that are referred to through<br/>
         a <u>common name</u>.  A specific element in an <u>array </u>is accessed by an <i>index.</i></b> <br/>
         in<i><u> C/C++</u></i>, all <u>arrays</u> consist of <b><i>contiguous memory locations</i></b>. The <i><b>lowest<br/>
@@ -23,12 +24,81 @@
             <h1>
                 <p>
                     <h1><span style="font-size: 50px;color:blue;"><b title="ARRAY"><u>SINGLE-DIMENSION</u> <u>ARRAYS</u></u></b></span></h1>
-                        <hr/>
+                        <hr/><a target="_blank"href="     ">SINGLE-DIMENSION ARRAY</a><br/>
                         in C/C++, ou cannot pass an entire array as an argument to a function. You can,<br/>
                          however, pass to the function a pointer to an array by specifying the array's name<br/>
                          without an index . For example, the following program fragment passed the address of <b>i</b> to <b>func1&lpar;&rpar;:
                 </p>
-                
+                <hr/>
+                <b style="font-size: 50px;color:blue"><b title="ARRAY DECLARATION"><u> ARRAY &ndash; DECLARATION</u></b></b>
+                <hr/><a target="_blank"href="     ">ARRAY DECLARATION</a><br/>
+                <br/><span style="color:red;"><b><u><i>SYNTAX.</i></u></b></span>
+                <br/><u><b>DATA TYPE</u> <u>ARRAY NAME [SIZE]</u></b><br/>
+                <b><i><u>DATA TYPE</u></i></b> &ndash;&gt; any valid c data type.<br/>
+                <b><i><u>ARRAY NAME</u></i></b> &ndash;&gt; any valid c identifier.<br/>
+                <b><i><u> SIZE </u></i></b> &ndash;&gt;  Any non Zero positive integer literal.<br/>
+                <br/><span style="color:red;"><b><u><i>EXAMPLE.</i></u></b></span>
+                <br/>&ast; int number &lsqb;10&rsqb;&semi;&sol;&sol;<i><u>Here number is an integer type array,<br/>
+                 &nbsp;it can store 10 different integer number at a  time.</u></i>
+                <br/>&ast;  Float Marks&colon;&dash;&lsqb;20&rsqb;&semi; &sol;&sol;<i><u>Here Marks is a float arrays ,</h1><br>
+                 it can store 20 different float numbers at a time.</i></u>
+                <br/> &ast; int n&lsqb;100&rsqb;&semi;&sol;&sol;<u><i>Here n is an integer array of capicity 100. that mean,<br/>
+                 it  can store 100 different integer number at a time.</i></u>   
+
+                 <br/><br/>
+                 <b style="color:red;font-size: 25px"> <u>HOW MUCH MEMORY IS ALLOCATED FOR AN ARRAY</u></b>
+                 <br/><a target="_blank"href="     ">HOW MUCH MEMORY IS ALLOCATED FOR AN ARRAY</a><br/>
+                 Total memory size allocated by an Array &#61; Size of Array Type &ast; Size of Array &comma;
+                 <br/><span style="color:greenyellow;"><b><u><i>EXAMPLE.</i></u></b></span>
+                 int x&lsqb;20&rsqb;
+                 <br/>
+                 Here x is an array of capicity 20 of integer type.
+                 <br/>
+                 Memory Size Allocated for x = Size of int &ast; Size of Array
+                 <br/> 4 Bytes&ast; 20 &equals; 80 Bytes.
+                 <br/>
+                  char C&lsqb;50&rsqb;&semi;
+                 <br/> Here C is an integer array of capicity 50 of character type.<br/>
+                 Memory Size Allocated for C &equals; size of char&ast; Size of array<br/>
+                 <br/> <b> 1 Byte &ast; 50</b>
+                 <br/>
+                 50 Bytes
+                 <br/>
+                 <b style="color:red;font-size: 25px"> <u>HOW MEMORY IS ALLOCATED FOR AN ARRAY</u></b>
+                 <br/> <br/><a target="_blank"href="     ">HOW MEMORY IS ALLOCATED FOR AN ARRAY</a> <br/>
+                 For an Array always Contigeous Me,ory is allocated.
+                 <br/>in an array every time is known as <span style="color:blue;"><b><u>ELEMENT</u></b></span>
+                 <br/> Every Element is identified by a  number known as <span style="color:blue;"><b><u>INDEX NUMBER</u></b></span>
+                <hr/> 
+                <span style="font-size: 50px;color:blue"><u> ACCESSING ELEMENT OF AN ARRAY </u></span><hr/>
+                <br/><br/><a target="_blank"href="     ">ACCESSING ELEMENT OF AN ARRAY </a><br/>
+                <span style="color:red;"><b><u><i>SYNTAX.</i></u></b></span>
+                <br/> arrName&lsqb;indexNumber&rsqb;
+                <br/> index number must be within <b>LOWER BOND &lpar;0&rpar;</b> and <b>UPPER BOND <i>&lpar;ArraySize-1 &rpar;</i></b>
+                <br/> <b><u>int arr&lpar;10&rpar;</u></b>
+
+                 <hr/>
+                 <span style="font-size: 50px;color:blue"><u> TRAVERSAL OF AN ARRAY </u></span><hr/>
+                 <br/><a target="_blank"href="     ">TRAVERSAL OF AN ARRAY </a><br/>
+                 <b>The Process of Accessing every element of an array once&comma;</b>
+                 <br/> To Traverse an array a loop is used.<br/>
+                 Generally 'for' loop is used to traverse the array because the size of <br/>
+                 an array is fixed and the loop counter is used as index number of array as&semi;<br/>
+                 for&lpar; i=0&semi; i&lt; SizeOfArray&semi;i&plus;&rpar;<br/>
+                   &lcub;<br/>
+                    &nbsp;&nbsp; <b>Process ith element of array&semi;</b><br/>
+                   &rcub; 
+                   <br/>
+                   <b style="color: rgb(137, 0, 139);"><u>FORWORD TRAVERSAL&colon;&dash;</u></b> From BEGNING to END of array.<br/>
+                   <b style="color: rgb(137, 0, 139);"><u>BACKWORD TRAVERSAL&colon;&dash;</u></b> From END to BEGNING of array.
+                   <br/>for&lpar; i=SizeOfArray&minus;1&semi; i&gt;&equals;0&semi;i&minus;&minus;&rpar;<br/>
+                   &lcub;<br/>
+                    &nbsp;&nbsp; <b>Process ith element of array&semi;</b><br/>
+                   &rcub; 
+
+
+
+                    
             
 
         
